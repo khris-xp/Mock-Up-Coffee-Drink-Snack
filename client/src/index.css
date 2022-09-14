@@ -19,13 +19,16 @@ code {
   padding: 0 20px;
   box-shadow: 0 0 35px #eee;
 }
-a{
+
+a {
   text-decoration: none;
 }
+
 ul li {
   list-style: none;
 }
-button{
+
+button {
   border: none;
   outline: none;
   background: transparent;
@@ -33,4 +36,10 @@ button{
 }
 
 /* Header */
-@import url("./components/headers/header.css")
+@import url("./components/headers/header.css");
+
+/* Products */
+@import url("./components/mainpages/products/products.css");
+
+/* Detail Product */
+@import url("./components/mainpages/detailProduct/detailProduct.css")
