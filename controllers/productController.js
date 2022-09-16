@@ -9,17 +9,12 @@ class APIfeatures {
     }
     filtering() {
         const queryObj = { ...this.queryString } // queryString = req.query
-        console.log({ before: queryObj })
 
         const excludeFields = ['page', 'sort', 'limit']
         excludeFields.forEach(el => delete (queryObj[el]))
 
-        console.log({ after: queryObj })
-
         let queryStr = JSON.stringify(queryObj)
         queryStr = queryStr.replace(/\b(gte|gt|lt|lte|regex)\b/g, match => '$' + match)
-
-        console.log({ queryObj, queryStr })
 
         this.query.find(JSON.parse(queryStr))
         return this;
