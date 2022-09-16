@@ -20,8 +20,6 @@ function Register() {
             localStorage.setItem('firstRegister', true)
 
             window.location.href = "/";
-
-
         } catch (err) {
             alert(err.response.data.msg)
         }
@@ -50,3 +48,4 @@ function Register() {
 }
 
 export default Register
+
