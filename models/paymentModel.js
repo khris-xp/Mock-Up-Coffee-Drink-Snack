@@ -17,7 +17,7 @@ const paymentSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    adddress: {
+    address: {
         type: Object,
         required: true
     },
