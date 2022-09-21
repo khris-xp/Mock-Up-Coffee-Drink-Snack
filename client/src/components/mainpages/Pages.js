@@ -7,6 +7,7 @@ import Register from './auth/Register'
 import OrderHistory from './history/OrderHistory'
 import OrderDetails from './history/OrderDetails'
 import Categories from './categories/Categories'
+import CreateProduct from './createProduct/CreateProduct'
 import Cart from './cart/Cart'
 import NotFound from './utlis/not_found/NotFound'
 
@@ -28,6 +29,7 @@ function Pages() {
             <Route path="/cart" element={<Cart />} />
 
             <Route path="/category" element={isAdmin ? <Categories /> : <NotFound />} />
+            <Route path="/create_product" element={isAdmin ? <CreateProduct /> : <NotFound />} />
             <Route path="*" element={<NotFound />} />
 
         </Routes>

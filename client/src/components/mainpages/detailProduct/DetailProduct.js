@@ -29,7 +29,7 @@ function DetailProduct() {
                         <h2>{detailProduct.title}</h2>
                         <h6>#id: {detailProduct.product_id}</h6>
                     </div>
-                    <span>$ {detailProduct.price}</span>
+                    <span>{detailProduct.price} Bath</span>
                     <p>{detailProduct.description}</p>
                     <p>{detailProduct.content}</p>
                     <p>Sold: {detailProduct.sold}</p>
