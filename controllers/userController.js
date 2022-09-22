@@ -51,7 +51,8 @@ const userController = {
 
             res.cookie('refreshtoken', refreshtoken, {
                 httpOmly: true,
-                path: '/user/refresh_token'
+                path: '/user/refresh_token',
+                maxAge: 7 * 24 * 60 * 60 * 1000 // 7 Day
             })
 
             res.json({ accestoken });
