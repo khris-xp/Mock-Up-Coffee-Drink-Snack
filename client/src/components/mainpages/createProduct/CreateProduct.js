@@ -27,6 +27,7 @@ function CreateProduct() {
 
     const [products] = state.productsAPI.products
     const [onEdit, setOnEdit] = useState(false);
+    const [callback, setCallback] = state.productsAPI.callback
 
     useEffect(() => {
         if (param.id) {
@@ -101,6 +102,9 @@ function CreateProduct() {
                     headers: { Authorization: token }
                 })
             }
+            setCallback(!callback)
+            setImages(false)
+            setProduct(initialState)
             navigate("/")
         } catch (err) {
             alert(err.response.data.msg)
