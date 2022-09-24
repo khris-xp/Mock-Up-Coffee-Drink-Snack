@@ -13,10 +13,10 @@ function BtnRender({ product }) {
             {
                 isAdmin ?
                     <>
-                        <Link id="btn_buy" to="/">
+                        <Link id="btn_buy" to="#!">
                             Delete
                         </Link>
-                        <Link id="btn_view" to={`/detail/${product._id}`}>
+                        <Link id="btn_view" to={`/edit_product/${product._id}`}>
                             Edit
                         </Link>
                     </>
