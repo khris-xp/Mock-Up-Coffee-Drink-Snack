@@ -5,18 +5,29 @@ function ProductsAPI() {
 
     const [products, setProducts] = useState([])
     const [callback, setCalback] = useState(false)
+    const [category, setCategory] = useState('')
+    const [sort, setSort] = useState('')
+    const [search, setSearch] = useState('')
+    const [page, setPage] = useState(1)
+    const [result, setResult] = useState(0)
 
     useEffect(() => {
         const getProducts = async () => {
-            const res = await axios.get('/api/products')
+            const res = await axios.get(`/api/products?limit=${page * 9}&${category}&${sort}&title[regex]=${search}`)
             setProducts(res.data.products)
+            setResult(res.data.result)
         }
         getProducts()
-    }, [callback])
+    }, [callback, category, sort, search, page])
 
     return {
         products: [products, setProducts],
-        callback: [callback, setCalback]
+        callback: [callback, setCalback],
+        category: [category, setCategory],
+        sort: [sort, setSort],
+        search: [search, setSearch],
+        page: [page, setPage],
+        result: [result, setResult]
     }
 }
 
