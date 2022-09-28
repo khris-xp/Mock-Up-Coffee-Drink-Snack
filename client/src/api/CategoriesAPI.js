@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 function CategoriesAPI() {
@@ -11,7 +11,7 @@ function CategoriesAPI() {
             setCategories(res.data);
         }
         getCategories()
-    },[callback])
+    }, [callback])
     return {
         categories: [categories, setCategories],
         callback: [callback, setCallback]

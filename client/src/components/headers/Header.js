@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { GlobalState } from '../../GlobalState'
 import Menu from './icon/menu.png'
 import Close from './icon/close.png'
