@@ -30,15 +30,8 @@ function Filters() {
         </select>
       </div>
 
-      <div className="search">
-        <form action="">
-          <input type="search" value={search} required
-            onChange={e => setSearch(e.target.value.toLowerCase())} />
-          <i className="fa fa-search"></i>
-        </form>
-      </div>
-      {/* <input type="text" className="" value={search} placeholder="Enter your search!"
-        onChange={e => setSearch(e.target.value.toLowerCase())} /> */}
+      <input type="text" className="" value={search} placeholder="Enter your search!"
+        onChange={e => setSearch(e.target.value.toLowerCase())} />
       <div className="row">
         <span>Sort By: </span>
         <select value={sort} onChange={e => setSort(e.target.value)}>

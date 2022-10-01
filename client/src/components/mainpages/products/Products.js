@@ -55,7 +55,7 @@ function Products() {
 
     return (
         <>
-        <Filters/>
+            <Filters />
             {
                 isAdmin &&
                 <div className="delete-all">
@@ -72,7 +72,7 @@ function Products() {
                     })
                 }
             </div>
-            <LoadMore/>
+            <LoadMore />
         </>
     )
 }

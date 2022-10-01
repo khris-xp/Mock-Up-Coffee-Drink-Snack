@@ -26,23 +26,48 @@ function Register() {
     }
 
     return (
-        <div className="login-page">
-            <form onSubmit={registerSubmit}>
-                <h2>Register</h2>
-                <input type="text" name="name" required
-                    placeholder='Name' value={user.name} onChange={onChangeInput} />
-
-                <input type="email" name="email" required
-                    placeholder='Email' value={user.email} onChange={onChangeInput} />
-
-                <input type="password" name="password" required autoComplete='on'
-                    placeholder='Password' value={user.password} onChange={onChangeInput} />
-
-                <div className="row">
-                    <button type="submit">Register</button>
-                    <Link to="/login">Login</Link>
+        <div>
+            <div class="text-center mt-24">
+                <div class="flex items-center justify-center">
+                    <svg fill="none" viewBox="0 0 24 24" class="w-12 h-12 text-blue-500" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
                 </div>
-            </form>
+                <h2 class="text-4xl tracking-tight">
+                    Register a new account
+                </h2>
+                <span class="text-sm">or <a href="/login" class="text-blue-500">
+                    sign in into your account
+                </a>
+                </span>
+            </div>
+            <div class="flex justify-center my-2 mx-4 md:mx-0">
+                <form class="w-full max-w-xl bg-white rounded-lg shadow-md p-6" onSubmit={registerSubmit}>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+
+                        <div class="w-full md:w-full px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password' >Name</label>
+                            <input placeholder="Name" type="text" name="name" value={user.name} onChange={onChangeInput} required
+                                className="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
+                        </div>
+
+                        <div class="w-full md:w-full px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password' >Email address</label>
+                            <input placeholder="Email" type="email" name="email" value={user.email} onChange={onChangeInput} required
+                                className="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
+                        </div>
+
+                        <div class="w-full md:w-full px-3 mb-6">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password'>Password</label>
+                            <input placeholder="Password" type="password" name="password" value={user.password} onChange={onChangeInput} autoComplete='on'
+                                class="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
+                        </div>
+                        <div class="w-full md:w-full pt-3 px-3">
+                            <button class="appearance-none block w-full bg-blue-600 text-gray-100 font-bold border border-gray-200 rounded-lg leading-tight hover:bg-blue-500 focus:outline-none focus:bg-white focus:border-gray-500">Sign in</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }

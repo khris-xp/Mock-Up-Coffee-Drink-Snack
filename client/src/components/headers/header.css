@@ -6,7 +6,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid;
 }
 
 header .logo {
