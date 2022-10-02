@@ -50,7 +50,6 @@ function Header() {
 
     let UserLinks = [
         { name: "HOME", link: "/", click: '' },
-        { name: "SHOP", link: "/shop"},
         { name: "HISTORY", link: "/history", click: '' },
         { name: "LOGOUT", link: "/", click: logoutUser }
     ];
@@ -64,8 +63,8 @@ function Header() {
     ];
 
     return (
-        <div>
-            <header>
+        <div >
+            <header className="sticky top-0 z-30 w-full px-2 py-4 bg-white sm:px-4 shadow-xl">
                 <div className='shadow-md w-full fixed top-0 left-0'>
                     <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
                         <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
@@ -81,7 +80,7 @@ function Header() {
                             <ion-icon name={open ? 'close' : 'menu'}></ion-icon>
                         </div>
 
-                        <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ' : 'top-[-490px]'}`}>
+                        <ul className={`md:flex md:items-center md:pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-20 ' : 'top-[-490px]'}`}>
                             {
                                 isAdmin ? AdminLinks.map((AdminLinks) => (
                                     <li key={AdminLinks.name} className='md:ml-8 text-xl md:my-0 my-7' onClick={AdminLinks.click}>
