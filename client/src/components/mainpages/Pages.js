@@ -10,6 +10,7 @@ import Categories from './categories/Categories'
 import CreateProduct from './createProduct/CreateProduct'
 import Cart from './cart/Cart'
 import NotFound from './utlis/not_found/NotFound'
+import Home from './home/Home'
 
 import { GlobalState } from '../../GlobalState'
 
@@ -20,7 +21,8 @@ function Pages() {
 
     return (
         <Routes>
-            <Route path="/" element={<Products />} />
+             <Route path="/" element={<Home/>}/>
+            <Route path="/shop" element={<Products />} />
             <Route path="/detail/:id" element={<DetailProduct />} />
             <Route path="/login" element={isLogged ? <NotFound /> : <Login />} />
             <Route path="/register" element={isLogged ? <NotFound /> : <Register />} />
