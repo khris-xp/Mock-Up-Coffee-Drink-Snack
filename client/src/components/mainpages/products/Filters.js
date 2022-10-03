@@ -15,10 +15,10 @@ function Filters() {
   }
 
   return (
-    <div className="filter_menu">
-      <div className="row">
+    <div className="w-full min-h-[40px] overflow-hidden flex justify-between items-center flex-wrap m-[15px_0] pt-[35px]">
+      <div className="grid-rows-1">
         <span>Filters: </span>
-        <select name="category" value={category} onChange={handleCategory}>
+        <select name="category" value={category} onChange={handleCategory} className="border-[1px] border-[solid] border-[#ccc] outline-none h-[40px] p-[0_5px] font-tight">
           <option value=''>All Product</option>
           {
             categories.map(category => (
@@ -30,11 +30,11 @@ function Filters() {
         </select>
       </div>
 
-      <input type="text" className="" value={search} placeholder="Enter your search!"
-        onChange={e => setSearch(e.target.value.toLowerCase())} />
-      <div className="row">
+      <input type="text" className="border-[1px] border-[solid] border-[#ccc] outline-none h-[40px] p-[0_5px] flex-[1] m-[0_10px] font-tight " value={search} placeholder="Enter your search!"
+        onChange={e => setSearch(e.target.value.toLowerCase())}  />
+      <div className="grid-rows-1">
         <span>Sort By: </span>
-        <select value={sort} onChange={e => setSort(e.target.value)}>
+        <select value={sort} onChange={e => setSort(e.target.value)} className="border-[1px] border-[solid] border-[#ccc] outline-none h-[40px] p-[0_5px] font-tight">
           <option value=''>Newest</option>
           <option value='sort=oldest'>Oldest</option>
           <option value='sort=-sold'>Best sales</option>

@@ -58,13 +58,13 @@ function Products() {
             <Filters />
             {
                 isAdmin &&
-                <div className="delete-all">
-                    <span>Select All</span>
-                    <input type="checkbox" checked={isCheck} onChange={checkAll} />
-                    <button onClick={deleteAll}>Delete All</button>
+                <div className="text-right m-[20px]">
+                    <span className="uppercase text-slate-600 tracking-[1.3px] font-tight">Select All</span>
+                    <input type="checkbox" checked={isCheck} onChange={checkAll} className="w-4 h-4 text-red-600 bg-gray-100 rounded border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 m-[0_15px]" />
+                    <button onClick={deleteAll} className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 font-tight m-[20px]">Delete All</button>
                 </div>
             }
-            <div className='products'>
+            <div className="w-full grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] justify-items-center m-[20px_0] my-[10px]">
                 {
                     products.map(product => {
                         return <ProductItem key={product._id} product={product} setProducts={setProducts}

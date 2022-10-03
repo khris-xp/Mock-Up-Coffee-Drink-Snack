@@ -7,10 +7,10 @@ function LoadMore() {
     const [result] = state.productsAPI.result
     return (
         <div>
-            <div className="load_more">
+            <div className="text-center">
                 {
                     result < page * 9 ? ""
-                    : <button onClick={() => setPage(page+1)}>Load More</button>
+                        : <button onClick={() => setPage(page + 1)} className="p-[10px_25px] mb-[20px] border-[1px_solid_#555] capitalize">Load More</button>
                 }
             </div>
         </div>
