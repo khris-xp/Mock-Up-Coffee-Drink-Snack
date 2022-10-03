@@ -72,7 +72,7 @@ function Home() {
       </section>
 
       {/* About Section */}
-      <section className="p-[50px_10%] flex flex-wrap bg-gray-50 gap-6 rounded-lg xl:p-[50px_7%] lg:[50px_4%]">
+      <section className="p-[50px_10%] flex flex-wrap bg-gray-50 gap-6 rounded-lg xl:p-[50px_7%] lg:[50px_4%] sm:flex-col-reverse">
         <div className="flex-[1_1_17rem]">
           <img src={about} alt="" className="w-full" />
         </div>
