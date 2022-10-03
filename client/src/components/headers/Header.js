@@ -1,7 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { GlobalState } from '../../GlobalState'
-import Menu from './icon/menu.png'
-import Close from './icon/close.png'
 import Cart from './icon/carts.png'
 import Logo from './icon/logo.png'
 import { Link } from 'react-router-dom'
@@ -23,33 +21,16 @@ function Header() {
         window.location.href = '/';
     }
 
-    const adminRouter = () => {
-        return (
-            <>
-                <li><Link to="/create_product">Create Product</Link></li>
-                <li><Link to="/category">Categories</Link></li>
-            </>
-        )
-    }
-
-    const loggedRouter = () => {
-        return (
-            <>
-                <li><Link to="/history">History</Link></li>
-                <li><Link to="/" onClick={logoutUser}>Logout</Link></li>
-            </>
-        )
-    }
-
     let Links = [
         { name: "HOME", link: "/" },
-        { name: "SHOP", link: "/shop"},
+        { name: "SHOP", link: "/shop" },
         { name: "LOGIN", link: "/login" },
         { name: "REGISTER", link: "/register" }
     ];
 
     let UserLinks = [
         { name: "HOME", link: "/", click: '' },
+        { name: "SHOP", link: "/shop", click: '' },
         { name: "HISTORY", link: "/history", click: '' },
         { name: "LOGOUT", link: "/", click: logoutUser }
     ];
