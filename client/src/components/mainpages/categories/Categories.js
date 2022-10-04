@@ -55,23 +55,23 @@ function Categories() {
     }
 
     return (
-        <div className="categories">
-            <form onSubmit={createCategory}>
-                <label htmlFor='category'>Category</label>
+        <div className="max-w-[700px] flex flex-wrap justify-around m-[30px_auto] mt-[100px]">
+            <form onSubmit={createCategory} className="w-[290px] mb-[20px]">
+                <label htmlFor='category' className="block font-bold tracking-[2px] uppercase mb-[10px] font-tight">Category</label>
                 <input type="text" name="category" value={category} required
-                    onChange={e => setCategory(e.target.value)} />
+                    onChange={e => setCategory(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline font-tight"/>
 
-                <button type="submit">{onEdit ? "Update" : "Create"}</button>
+                <button type="submit" className="h-[35px] border-none outline-none border-[1px_solid_#555] w-[70px] bg-[#555] text-white mt-[20px] font-tight rounded-xl">{onEdit ? "Update" : "Create"}</button>
             </form>
 
             <div className="col">
                 {
                     categories.map(category => (
-                        <div className="row" key={category._id}>
-                            <p>{category.name}</p>
+                        <div className="min-w-[290px] flex justify-between items-center p-[10px] mb-[10px] border-[1px_solid_#ccc]" key={category._id}>
+                            <p className="font-tight font-bold">{category.name}</p>
                             <div>
-                                <button onClick={() => editCategory(category._id, category.name)}>Edit</button>
-                                <button onClick={() => deleteCategory(category._id, category.name)}>Delete</button>
+                                <button onClick={() => editCategory(category._id, category.name)} className="h-[35px] border-none outline-none border-b-[1px_solid_#555] w-[70px] bg-[#555] text-white ml-[10px] font-tight rounded-xl">Edit</button>
+                                <button onClick={() => deleteCategory(category._id, category.name)} className="h-[35px] border-none outline-none border-b-[1px_solid_#555] w-[70px] bg-[#555] text-white ml-[10px] font-tight rounded-xl">Delete</button>
                             </div>
                         </div>
                     ))
