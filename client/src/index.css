@@ -41,14 +41,5 @@ button {
 /* Products */
 @import url("./components/mainpages/products/products.css");
 
-/* Detail Product */
-@import url("./components/mainpages/detailProduct/detailProduct.css");
-
-/* Cart */
-@import url("./components/mainpages/cart/cart.css");
-
 /* History */
 @import url("./components/mainpages/history/history.css");
-
-/* Create Product*/
-@import url("./components/mainpages/createProduct/createProduct.css");

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 function Login() {
@@ -25,35 +24,35 @@ function Login() {
 
     return (
         <div>
-            <div class="text-center mt-24">
-                <div class="flex items-center justify-center">
+            <div className="text-center mt-24">
+                <div className="flex items-center justify-center">
                     <svg fill="none" viewBox="0 0 24 24" class="w-12 h-12 text-blue-500" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h2 class="text-4xl tracking-tight">
-                    Sign in into your account
+                <h2 className="text-4xl tracking-tight">
+                    Sign into your account
                 </h2>
-                <span class="text-sm">or <a href="/register" class="text-blue-500">
+                <span className="text-sm">or <a href="/register" class="text-blue-500">
                     register a new account
                 </a>
                 </span>
             </div>
-            <div class="flex justify-center my-2 mx-4 md:mx-0">
-                <form class="w-full max-w-xl bg-white rounded-lg shadow-md p-6" onSubmit={loginSubmit}>
-                    <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="w-full md:w-full px-3 mb-6">
+            <div className="flex justify-center my-2 mx-4 md:mx-0">
+                <form className="w-full max-w-xl bg-white rounded-lg shadow-md p-6" onSubmit={loginSubmit}>
+                    <div className="flex flex-wrap -mx-3 mb-3">
+                        <div className="w-full md:w-full px-3 mb-6">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password' >Email address</label>
                             <input placeholder="Email" type="email" name="email" value={user.email} onChange={onChangeInput} required
                                 className="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
                         </div>
-                        <div class="w-full md:w-full px-3 mb-6">
-                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password'>Password</label>
+                        <div className="w-full md:w-full px-3 mb-6">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password'>Password</label>
                             <input placeholder="Password" type="password" name="password" value={user.password} onChange={onChangeInput} autoComplete='on'
-                                class="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
+                                className="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
                         </div>
-                        <div class="w-full md:w-full pt-3 px-3">
-                            <button class="appearance-none block w-full bg-blue-600 text-gray-100 font-bold border border-gray-200 rounded-lg leading-tight hover:bg-blue-500 focus:outline-none focus:bg-white focus:border-gray-500">Sign in</button>
+                        <div className="w-full md:w-full pt-3 px-3">
+                            <button className="appearance-none block w-full bg-blue-600 text-gray-100 font-bold border border-gray-200 rounded-lg leading-tight hover:bg-blue-500 focus:outline-none focus:bg-white focus:border-gray-500 p-[8px]">Sign in</button>
                         </div>
                     </div>
                 </form>

@@ -121,7 +121,7 @@ function CreateProduct() {
     }
 
     return (
-        <div className="w-full flex flex-wrap items-center justify-around mt-[80px]">
+        <div className="w-full flex flex-wrap items-center justify-around mt-[40px]">
             <div className="max-w-md h-[500px] w-full border-[1px] border-[solid] border-[#ddd] p-[15px] m-[20px] relative">
                 
                 <input type="file" name="file" onChange={handleUpload} className="relative w-full h-full outline-none 

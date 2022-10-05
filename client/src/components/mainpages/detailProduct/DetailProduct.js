@@ -22,18 +22,18 @@ function DetailProduct() {
 
     return (
         <>
-            <div className="detail">
-                <img src={detailProduct.images.url} alt="" />
-                <div className="box-detail">
-                    <div className="row">
-                        <h2>{detailProduct.title}</h2>
-                        <h6>#id: {detailProduct.product_id}</h6>
+            <div className="w-full flex justify-around flex-wrap p-[50px] text-[150%]">
+                <img src={detailProduct.images.url} alt="" className="max-w-[400px] w-full m-[20px] h-[450px] object-cover block"/>
+                <div className="max-w-[500px] w-full m-[5px_20px]">
+                    <div className="flex justify-between items-center">
+                        <h2 className="uppercase text-[#0F3460] tracking-[2px] font-[2rem] font-bold font-tight">{detailProduct.title}</h2>
+                        <h6 className="font-tight">#id: {detailProduct.product_id}</h6>
                     </div>
-                    <span>{detailProduct.price} Bath</span>
-                    <p>{detailProduct.description}</p>
-                    <p>{detailProduct.content}</p>
-                    <p>Sold: {detailProduct.sold}</p>
-                    <Link to="/cart" className="cart"
+                    <span className="font-tight">{detailProduct.price} Bath</span>
+                    <p className="font-tight leading-[1.5] m-[10px_0] opacity-[0.8]">{detailProduct.description}</p>
+                    <p className="font-tight leading-[1.5] m-[10px_0] opacity-[0.8]">{detailProduct.content}</p>
+                    <p className="font-tight leading-[1.5] m-[10px_0] opacity-[0.8]">Sold: {detailProduct.sold}</p>
+                    <Link to="/cart" className="bg-[#333] text-white mt-[10px] p-[10px_25px] inline-block uppercase tracking-[2px]"
                         onClick={() => addCart(detailProduct)}>
                         Buy Now
                     </Link>
@@ -41,8 +41,8 @@ function DetailProduct() {
             </div>
 
             <div>
-                <h2>Related Products</h2>
-                <div className='products'>
+                <h2 className="font-tight ml-[60px] text-lg">Related Products</h2>
+                <div className='w-full grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] justify-items-center m-[20px_0] my-[10px]'>
                     {
                         products.map(product => {
                             return product.category === detailProduct.category
