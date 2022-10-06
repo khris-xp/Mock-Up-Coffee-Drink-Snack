@@ -16,7 +16,7 @@ function ProductItem({ product, isAdmin, deleteProduct, handleCheck }) {
 
             <div>
                 <h2 title={product.title} className="mt-[10px] text-xl w-full text-ellipsis overflow-hidden whitespace-nowrap capitalize cursor-pointer text-[#323232] font-tight">{product.title}</h2>
-                <span className="text-[#D2001A] font-tight text-base">{product.price} Bath</span>
+                <span className="text-[#D2001A] font-tight text-base">{product.price} Baht</span>
                 <p className="w-full h-[70px] overflow-hidden text-[#323232] font-tight">{product.description}</p>
             </div>
 

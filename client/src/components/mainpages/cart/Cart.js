@@ -89,7 +89,7 @@ function Cart() {
                         <div className="max-w-[500px] w-full m-[5px_20px]">
                             <h2 className="uppercase text-[#0078AA] tracking-[2px] font-[2rem] font-extrabold font-tight">{product.title}</h2>
 
-                            <h3 className="mt-[10px] text-[#D2001A] font-tight">{product.price * product.quantity} Bath</h3>
+                            <h3 className="mt-[10px] text-[#D2001A] font-tight">{product.price * product.quantity} Baht</h3>
                             <p className="leading-[1.5] m-[10px_0] opacity-80 font-tight">{product.description}</p>
                             <p className="leading-[1.5] m-[10px_0] opacity-80 font-tight">{product.content}</p>
 
@@ -109,7 +109,7 @@ function Cart() {
             }
 
             <div className="w-full h-[50px] flex items-center justify-between">
-                <h3 className="text-[#D2001A] font-bold font-tight">Total: $ {total}</h3>
+                <h3 className="text-[#D2001A] font-bold font-tight">Total: {total} Baht</h3>
                 <PaypalButton
                     total={total}
                     tranSuccess={tranSuccess} />

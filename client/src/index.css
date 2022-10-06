@@ -40,6 +40,3 @@ button {
 
 /* Products */
 @import url("./components/mainpages/products/products.css");
-
-/* History */
-@import url("./components/mainpages/history/history.css");

@@ -29,7 +29,7 @@ function DetailProduct() {
                         <h2 className="uppercase text-[#0F3460] tracking-[2px] font-[2rem] font-bold font-tight">{detailProduct.title}</h2>
                         <h6 className="font-tight">#id: {detailProduct.product_id}</h6>
                     </div>
-                    <span className="font-tight">{detailProduct.price} Bath</span>
+                    <span className="font-tight">{detailProduct.price} Baht</span>
                     <p className="font-tight leading-[1.5] m-[10px_0] opacity-[0.8]">{detailProduct.description}</p>
                     <p className="font-tight leading-[1.5] m-[10px_0] opacity-[0.8]">{detailProduct.content}</p>
                     <p className="font-tight leading-[1.5] m-[10px_0] opacity-[0.8]">Sold: {detailProduct.sold}</p>
