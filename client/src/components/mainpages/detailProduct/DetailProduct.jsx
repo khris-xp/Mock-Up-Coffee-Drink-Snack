@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { GlobalState } from '../../../GlobalState'
-import ProductItem from '../utlis/productItem/ProductItem'
+import ProductItem from '../utils/productItem/ProductItem'
 
 function DetailProduct() {
     const params = useParams()
@@ -23,7 +23,7 @@ function DetailProduct() {
     return (
         <>
             <div className="w-full flex justify-around flex-wrap p-[50px] text-[150%]">
-                <img src={detailProduct.images.url} alt="" className="max-w-[400px] w-full m-[20px] h-[450px] object-cover block"/>
+                <img src={detailProduct.images.url} alt="" className="max-w-[400px] w-full m-[20px] h-[450px] object-cover block" />
                 <div className="max-w-[500px] w-full m-[5px_20px]">
                     <div className="flex justify-between items-center">
                         <h2 className="uppercase text-[#0F3460] tracking-[2px] font-[2rem] font-bold font-tight">{detailProduct.title}</h2>

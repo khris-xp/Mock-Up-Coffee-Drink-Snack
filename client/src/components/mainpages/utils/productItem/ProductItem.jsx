@@ -9,10 +9,10 @@ function ProductItem({ product, isAdmin, deleteProduct, handleCheck }) {
 
             {
                 isAdmin && <input type="checkbox" checked={product.checked}
-                    onChange={() => handleCheck(product._id)} className="absolute w-[25px] h-[25px]"/>
+                    onChange={() => handleCheck(product._id)} className="absolute w-[25px] h-[25px]" />
             }
 
-            <img src={product.images.url} alt="" className="w-full h-[300px] block object-cover rounded"/>
+            <img src={product.images.url} alt="" className="w-full h-[300px] block object-cover rounded" />
 
             <div>
                 <h2 title={product.title} className="mt-[10px] text-xl w-full text-ellipsis overflow-hidden whitespace-nowrap capitalize cursor-pointer text-[#323232] font-tight">{product.title}</h2>

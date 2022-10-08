@@ -59,7 +59,7 @@ function Categories() {
             <form onSubmit={createCategory} className="w-[290px] mb-[20px]">
                 <label htmlFor='category' className="block font-bold tracking-[2px] uppercase mb-[10px] font-tight">Category</label>
                 <input type="text" name="category" value={category} required
-                    onChange={e => setCategory(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline font-tight"/>
+                    onChange={e => setCategory(e.target.value)} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline font-tight" />
 
                 <button type="submit" className="h-[35px] border-none outline-none border-[1px_solid_#555] w-[70px] bg-[#555] text-white mt-[20px] font-tight rounded-xl">{onEdit ? "Update" : "Create"}</button>
             </form>

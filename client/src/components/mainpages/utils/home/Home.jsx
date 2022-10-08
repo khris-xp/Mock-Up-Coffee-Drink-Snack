@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import home from './img/home.png'
-import newProduct from './img/newProduct.png'
-import shop from './img/Shop.png'
-import about from './img/About.png'
-import { GlobalState } from '../../../GlobalState'
+import home from './home_asset/home.png'
+import newProduct from './home_asset/newProduct.png'
+import shop from './home_asset/Shop.png'
+import about from './home_asset/About.png'
+import { GlobalState } from '../../../../GlobalState'
 import { Link } from 'react-router-dom'
 
 function Home() {
@@ -22,8 +22,8 @@ function Home() {
           <h2 className="text-[1.8rem] text-[#1e3932] font-semibold uppercase m-[0.5rem_0_1.4rem] font-tight xl:text-[1.5rem] md:text-[1.2rem]">Free Coffee is a <br />tap away</h2>
           {
             isAdmin ? <Link to="/shop" className="p-[7px_16px] border-[2px] border-[solid] border-[#1e3932] rounded-[40px] text-[#1e3932] font-medium hover:text-white hover:bg-[#1e3932] font-tight">Admin</Link>
-            : isLogged ? <Link to="/shop" className="p-[7px_16px] border-[2px] border-[solid] border-[#1e3932] rounded-[40px] text-[#1e3932] font-medium hover:text-white hover:bg-[#1e3932] font-tight">Order Now</Link>
-            : <Link to="/login" className="p-[7px_16px] border-[2px] border-[solid] border-[#1e3932] rounded-[40px] text-[#1e3932] font-medium hover:text-white hover:bg-[#1e3932] font-tight">Login || Reigster</Link>
+              : isLogged ? <Link to="/shop" className="p-[7px_16px] border-[2px] border-[solid] border-[#1e3932] rounded-[40px] text-[#1e3932] font-medium hover:text-white hover:bg-[#1e3932] font-tight">Order Now</Link>
+                : <Link to="/login" className="p-[7px_16px] border-[2px] border-[solid] border-[#1e3932] rounded-[40px] text-[#1e3932] font-medium hover:text-white hover:bg-[#1e3932] font-tight">Login || Reigster</Link>
           }
         </div>
         <div class="flex-[1_1_17rem]">
@@ -62,7 +62,7 @@ function Home() {
             <h2 className="text-xl text-[#1e3932] font-tight font-semibold">The origin of our shop</h2>
             <p className="m-[0.5rem_0_1rem] text-justify font-tight">Our shop, in addition to having coffee that is the main product. We also have tea and iced cocoa that are equally popular. with carefully selected coffee beans Including various teas that are delicious and different from other shops.</p>
             <p className="m-[0.5rem_0_1rem] text-justify font-tight">So we want you to try our products and you will feel the difference of our products that are not like other places, whether it's tea or coffee. That's because our Basrista is experienced and meticulous in every process. in brewing until the quality product comes out to your hand</p>
-            
+
             <Link to="/shop" className="p-[7px_16px] border-[2px] border-[solid] border-[#1e3932] rounded-[40px] text-[#1e3932] font-medium hover:text-white hover:bg-[#1e3932] font-tight">Order Now</Link>
           </div>
           <div className="flex-[1_1_21rem]">

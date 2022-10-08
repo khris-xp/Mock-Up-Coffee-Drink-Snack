@@ -36,7 +36,3 @@ button {
   background: transparent;
   cursor: pointer;
 }
-
-
-/* Products */
-@import url("./components/mainpages/products/products.css");

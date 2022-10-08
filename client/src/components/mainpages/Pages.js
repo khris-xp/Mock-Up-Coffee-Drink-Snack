@@ -9,8 +9,8 @@ import OrderDetails from './history/OrderDetails'
 import Categories from './categories/Categories'
 import CreateProduct from './createProduct/CreateProduct'
 import Cart from './cart/Cart'
-import NotFound from './utlis/not_found/NotFound'
-import Home from './home/Home'
+import NotFound from './utils/not_found/NotFound'
+import Home from './utils/home/Home.jsx'
 
 import { GlobalState } from '../../GlobalState'
 
@@ -21,7 +21,7 @@ function Pages() {
 
     return (
         <Routes>
-             <Route path="/" element={<Home/>}/>
+            <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Products />} />
             <Route path="/detail/:id" element={<DetailProduct />} />
             <Route path="/login" element={isLogged ? <NotFound /> : <Login />} />

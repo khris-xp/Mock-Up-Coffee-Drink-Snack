@@ -123,7 +123,7 @@ function CreateProduct() {
     return (
         <div className="w-full flex flex-wrap items-center justify-around mt-[40px]">
             <div className="max-w-md h-[500px] w-full border-[1px] border-[solid] border-[#ddd] p-[15px] m-[20px] relative">
-                
+
                 <input type="file" name="file" onChange={handleUpload} className="relative w-full h-full outline-none 
                 before:content-['+'] before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-white before:text-[#FFD372] before:text-[17rem] before:text-center
                 before:cursor-pointer before:m-[auto]"/>
@@ -134,42 +134,42 @@ function CreateProduct() {
                     rounded-[50%] p-[6px_10px] cursor-pointer font-black text-[#D2001A]
                     ">X</span>
                 </div>
-            
+
             </div>
 
             <form onSubmit={handleSubmit} className="max-w-[500px] min-w-[290px] w-full m-[15px_30px]">
                 <div className="w-full m-[15px_0]">
                     <label htmlFor='product_id' className="font-tight">Product ID</label>
                     <input type="text" name="product_id" id="product_id" required
-                        value={product.product_id} onChange={handleChangeInput} disabled={product._id} 
-                        className="w-full min-h-[40px] p-[0_5px] mt-[5px] font-tight"/>
+                        value={product.product_id} onChange={handleChangeInput} disabled={product._id}
+                        className="w-full min-h-[40px] p-[0_5px] mt-[5px] font-tight border-[1px] border-[solid] border-[#555] rounded" />
                 </div>
 
                 <div className="w-full m-[15px_0]">
                     <label htmlFor='title' className="font-tight">Title</label>
                     <input type="text" name="title" id="title" required
-                        value={product.title} onChange={handleChangeInput} 
-                        className="w-full min-h-[40px] p-[0_5px] mt-[5px] font-tight"/>
+                        value={product.title} onChange={handleChangeInput}
+                        className="w-full min-h-[40px] p-[0_5px] mt-[5px] font-tight border-[1px] border-[solid] border-[#555] rounded" />
                 </div>
 
                 <div className="w-full m-[15px_0]">
                     <label htmlFor='price' className="font-tight">Price</label>
                     <input type="text" name="price" id="price" required
-                        value={product.price} onChange={handleChangeInput} 
-                        className="w-full min-h-[40px] p-[0_5px] mt-[5px] font-tight"/>
+                        value={product.price} onChange={handleChangeInput}
+                        className="w-full min-h-[40px] p-[0_5px] mt-[5px] font-tight border-[1px] border-[solid] border-[#555] rounded" />
                 </div>
 
                 <div className="w-full m-[15px_0]">
                     <label htmlFor='description' className="font-tight">Description</label>
                     <textarea type="text" name="description" id="description" required
-                        value={product.description} rows="5" onChange={handleChangeInput} 
+                        value={product.description} rows="5" onChange={handleChangeInput}
                         className="w-full min-h-[40px] p-[0_5px] mt-[5px] font-tight border-[1px] border-[solid] border-[#555] rounded" />
                 </div>
 
                 <div className="w-full m-[15px_0]">
                     <label htmlFor='content' className="font-tight">Content</label>
                     <textarea type="text" name="content" id="content" required
-                        value={product.content} rows="7" onChange={handleChangeInput} 
+                        value={product.content} rows="7" onChange={handleChangeInput}
                         className="w-full min-h-[40px] p-[0_5px] mt-[5px] font-tight border-[1px] border-[solid] border-[#555] rounded" />
                 </div>
 
