@@ -6,6 +6,8 @@ function Register() {
         name: '', email: '', password: ''
     })
 
+    const [formErrors, setFormErrors] = useState({});
+
     const onChangeInput = e => {
         const { name, value } = e.target;
         setUser({ ...user, [name]: value })
@@ -13,6 +15,7 @@ function Register() {
 
     const registerSubmit = async e => {
         e.preventDefault()
+        setFormErrors(validate(user));
         try {
             await axios.post('/user/register', { ...user })
 
@@ -23,6 +26,27 @@ function Register() {
             alert(err.response.data.msg)
         }
     }
+
+    const validate = (values) => {
+        const errors = {};
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+        if (!values.name) {
+            errors.name = "Username is required!";
+        }
+        if (!values.email) {
+            errors.email = "Email is required!";
+        } else if (!regex.test(values.email)) {
+            errors.email = "This is not a valid email format!";
+        }
+        if (!values.password) {
+            errors.password = "Password is required";
+        } else if (values.password.length < 4) {
+            errors.password = "Password must be more than 4 characters";
+        } else if (values.password.length > 10) {
+            errors.password = "Password cannot exceed more than 10 characters";
+        }
+        return errors;
+    };
 
     return (
         <div>
@@ -46,21 +70,24 @@ function Register() {
 
                         <div className="w-full md:w-full px-3 mb-6">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password' >Name</label>
-                            <input placeholder="Name" type="text" name="name" value={user.name} onChange={onChangeInput} required
+                            <input placeholder="Name" type="text" name="name" value={user.name} onChange={onChangeInput}
                                 className="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
                         </div>
+                        <p className="font-tight mb-[20px] ml-[20px] text-red-600 font-semibold">{formErrors.name}</p>
 
                         <div class="w-full md:w-full px-3 mb-6">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password' >Email address</label>
-                            <input placeholder="Email" type="email" name="email" value={user.email} onChange={onChangeInput} required
+                            <input placeholder="Email" type="text" name="email" value={user.email} onChange={onChangeInput}
                                 className="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
                         </div>
+                        <p className="font-tight mb-[20px] ml-[20px] text-red-600 font-semibold">{formErrors.email}</p>
 
                         <div className="w-full md:w-full px-3 mb-6">
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for='Password'>Password</label>
                             <input placeholder="Password" type="password" name="password" value={user.password} onChange={onChangeInput} autoComplete='on'
                                 className="text-md block px-3 py-2  rounded-lg w-full bg-white border-2 border-gray-300 placeholder-gray-600 shadow-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"></input>
                         </div>
+                        <p className="font-tight mb-[20px] ml-[20px] text-red-600 font-semibold">{formErrors.password}</p>
                         <div className="w-full md:w-full pt-3 px-3">
                             <button className="appearance-none block w-full bg-blue-600 text-gray-100 font-bold border border-gray-200 rounded-lg leading-tight hover:bg-blue-500 focus:outline-none focus:bg-white focus:border-gray-500 p-[8px]">Sign in</button>
                         </div>
