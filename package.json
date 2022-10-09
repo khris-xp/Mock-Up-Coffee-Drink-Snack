@@ -1,5 +1,5 @@
 {
-  "homepage": "htpp://khris-xp.githu.io/Mock-Up-Coffee-Drink-Snack",
+  "homepage": "http://khris-xp.githu.io/Mock-Up-Coffee-Drink-Snack",
   "name": "mock-up-coffee-drink-snack",
   "version": "1.0.0",
   "engines": {
@@ -9,14 +9,14 @@
   "main": "server.js",
   "scripts": {
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "deploy":"npm run build&&gh-pages -d build",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "cd client && npm run start",
     "server-install": "npm install",
     "client-install": "cd client && npm install",
     "install-all": "concurrently \"npm run server-install\" \"npm run client-install\"",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "repository": {
